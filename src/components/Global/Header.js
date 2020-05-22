@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import logo from './images/logo.svg';
 import './css/Header.css';
@@ -22,7 +23,7 @@ class Header extends Component {
           <h2>{title}</h2>
           <ul className="menu">
             {items && items.map((item, key) => {
-                return <li key={key}>{item.title}</li>;
+                return <li key={key}><Link to={item.url}>{item.title}</Link></li>;
             })}
           </ul>
         </div>
