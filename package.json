@@ -46,6 +46,9 @@
     "webpack-split-chunks": "^0.2.1"
   },
   "scripts": {
-    "start": "babel-node src/server/server.js"
+    "dev": "react-scripts start",
+    "start": "serve -s build",
+    "build": "react-scripts build",
+    "heroku-postbuild": "npm run build"
   }
 }
