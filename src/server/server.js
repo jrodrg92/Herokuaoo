@@ -21,11 +21,11 @@ if(isDevelopment){
     app.use(webpackHotmiddleware(webpackCompiler));
 }
 
-app.get('*', (req, res) => {
-    console.log(req);
-    console.log(res);
-    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
-})
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.listen(port, err => {
     if(!err){
