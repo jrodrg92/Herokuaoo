@@ -14,6 +14,7 @@ const PATHS = {
 };
 
 const getDevtool = () => 'cheap-module-eval-source-map';
+
 const getEntry = () => {
   const entry = [PATHS.index];
 
@@ -23,11 +24,13 @@ const getEntry = () => {
   console.log(entry);
   return entry;
 };
+
 const getOutput = () => ({
   path: PATHS.build,
   publicPath: '/',
   filename: '[name].bundle.js'
 });
+
 const getPlugins = () => {
   const plugins = [
     new ChunksPlugin({
@@ -54,6 +57,7 @@ const getPlugins = () => {
 
   return plugins;
 };
+
 const getLoaders = () => ({
   loaders: [
     {
