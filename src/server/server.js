@@ -1,28 +1,31 @@
 import express from 'express';
 import webpack from 'webpack';
 import path from 'path';
-import webpackDevMiddleware from 'webpack-dev-middleware';
-import webpackHotMiddleware from 'webpack-hot-middleware';
+import webpackDevmiddleware from 'webpack-dev-middleware';
+import webpackHotmiddleware from 'webpack-hot-middleware';
 import open from 'open';
 
-import webpackConfig from '../../webpack.config.dev.js';
+import webpackconfig from '../../webpack.config.babel';
 
-//Server port
 const port = process.env.PORT || 3000;
 
-//app
+const isDevelopment = process.env.NODE_ENV !== 'production';
+
 const app= express();
 
-//Webpack Compiler
-const webPackCompiler = webpack(webpackConfig);
+app.use(express.static(path.join(__dirname, '../public')))
 
-//webpack middleware
-app.use(webpackDevMiddleware(webPackCompiler));
-app.use(webpackHotMiddleware(webPackCompiler));
+const webpackCompiler = webpack(webpackconfig);
+if(isDevelopment){
+    app.use(webpackDevmiddleware(webpackCompiler));
+    app.use(webpackHotmiddleware(webpackCompiler));
+}
 
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
-});
+    console.log(req);
+    console.log(res);
+    res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+})
 
 app.listen(port, err => {
     if(!err){

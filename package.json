@@ -40,6 +40,8 @@
     "redux-promise-middleware": "^4.3.0"
   },
   "scripts": {
-    "start": "babel-node src/server/server.js"
+    "start": "babel-node src/server/server.js",
+    "production": "NODE_ENV=production BABEL_ENV=production npm run build && npm start",
+    "build": "NODE_ENV=production webpack --config webpack.config.babel.js"
   }
 }
