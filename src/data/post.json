@@ -1,0 +1,16 @@
+{
+    "response": [
+      {
+        "id": 1,
+        "title": "Test 1",
+        "slug": "test-1",
+        "content": "<p>Test 1 - Content</p>",
+        "author": "Jrodg92",
+        "day": "25",
+        "month": "05",
+        "year": "2020",
+        "language": "es",
+        "state": "Active"
+      }
+    ]
+  }
