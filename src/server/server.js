@@ -8,6 +8,7 @@ import open from 'open';
 import webpackconfig from '../../webpack.config.babel';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //API
 import blogApi from './api/blog';
 
@@ -16,6 +17,8 @@ import * as hbsHelper from '../lib/handlebars';
 import { isMobile } from '../lib/utils/device';
 
 //Server port
+=======
+>>>>>>> parent of 9e60c38... merge dev
 =======
 >>>>>>> parent of 9e60c38... merge dev
 const port = process.env.PORT || 3000;
@@ -37,6 +40,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 <<<<<<< HEAD
+<<<<<<< HEAD
 })
 
 //API dispatch
@@ -50,6 +54,9 @@ app.engine('.hbs', exphbs({
 
 //View engine setup
 app.set('views', path.join(__dirname, './views'));
+=======
+});
+>>>>>>> parent of 9e60c38... merge dev
 =======
 });
 >>>>>>> parent of 9e60c38... merge dev
