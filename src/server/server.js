@@ -4,10 +4,10 @@ import path from 'path';
 import webpackDevmiddleware from 'webpack-dev-middleware';
 import webpackHotmiddleware from 'webpack-hot-middleware';
 import open from 'open';
-import exphbs from 'express-handlebars';
 
 import webpackconfig from '../../webpack.config.babel';
 
+<<<<<<< HEAD
 //API
 import blogApi from './api/blog';
 
@@ -16,6 +16,8 @@ import * as hbsHelper from '../lib/handlebars';
 import { isMobile } from '../lib/utils/device';
 
 //Server port
+=======
+>>>>>>> parent of 9e60c38... merge dev
 const port = process.env.PORT || 3000;
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
@@ -34,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
+<<<<<<< HEAD
 })
 
 //API dispatch
@@ -47,6 +50,9 @@ app.engine('.hbs', exphbs({
 
 //View engine setup
 app.set('views', path.join(__dirname, './views'));
+=======
+});
+>>>>>>> parent of 9e60c38... merge dev
 
 app.listen(port, err => {
     if(!err){
