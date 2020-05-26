@@ -61,6 +61,6 @@
     "webpack-split-chunks": "^0.2.1"
   },
   "scripts": {
-    "start": "babel-node src/server/server.js"   
+    "start": "babel-node src/server/index.js"   
   }
 }
