@@ -10,6 +10,7 @@ import webpackconfig from '../../webpack.config.babel';
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 //API
 import blogApi from './api/blog';
 
@@ -17,6 +18,8 @@ import * as hbsHelper from '../lib/handlebars';
 
 import { isMobile } from '../lib/utils/device';
 
+=======
+>>>>>>> parent of 6b67582... cambios node api
 =======
 >>>>>>> parent of 6b67582... cambios node api
 //Server port
@@ -47,6 +50,7 @@ app.get('*', function (req, res) {
 })
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 //API dispatch
 app.use('/api/blog', blogApi);
 
@@ -63,6 +67,8 @@ app.set('views', path.join(__dirname, './views'));
 >>>>>>> parent of 9e60c38... merge dev
 =======
 =======
+=======
+>>>>>>> parent of 6b67582... cambios node api
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../public/index.html'));
 >>>>>>> parent of 6b67582... cambios node api
