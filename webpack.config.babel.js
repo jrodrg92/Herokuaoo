@@ -9,12 +9,11 @@ const isDevelopment = process.env.NODE_ENV !== 'production';
 // Paths
 const PATHS = {
   index: path.join(__dirname, 'src/index'),
-  build: path.join(__dirname, '/dist'),
+  build: path.join(__dirname, 'src/public'),
   src: path.join(__dirname, 'src')
 };
 
 const getDevtool = () => 'cheap-module-eval-source-map';
-
 const getEntry = () => {
   const entry = [PATHS.index];
 
