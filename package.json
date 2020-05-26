@@ -61,15 +61,6 @@
     "webpack-split-chunks": "^0.2.1"
   },
   "scripts": {
-<<<<<<< HEAD
-    "start": "babel-node src/server/server.js",    
-    "production": "NODE_ENV=production BABEL_ENV=production npm run build && npm start",
-    "build": "NODE_ENV=production webpack --config webpack.config.babel.js"
-    
-=======
-    "start": "babel-node src/server/server.js",
-    "production": "NODE_ENV=production BABEL_ENV=production npm run build && npm start",
-    "build": "NODE_ENV=production webpack --config webpack.config.babel.js"
->>>>>>> parent of e0a8753... configuración produccion
+    "start": "babel-node src/server/server.js"   
   }
 }
