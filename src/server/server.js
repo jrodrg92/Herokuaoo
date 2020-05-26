@@ -8,8 +8,6 @@ import exphbs from 'express-handlebars';
 
 import webpackconfig from '../../webpack.config.babel';
 
-<<<<<<< HEAD
-=======
 //API
 import blogApi from './api/blog';
 
@@ -18,7 +16,6 @@ import * as hbsHelper from '../lib/handlebars';
 import { isMobile } from '../lib/utils/device';
 
 //Server port
->>>>>>> origin/development
 const port = process.env.PORT || 3000;
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
@@ -35,10 +32,10 @@ if(isDevelopment){
 
 app.use(express.static(path.join(__dirname, 'build')));
 
-<<<<<<< HEAD
 app.get('*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
-=======
+})
+
 //API dispatch
 app.use('/api/blog', blogApi);
 
