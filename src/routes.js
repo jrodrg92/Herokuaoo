@@ -4,11 +4,9 @@ import {Route, Switch} from 'react-router-dom';
 //Components
 import App from './components/App';
 import Blog from './components/Blog';
-
+import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
-
-import Home from './containers/Home';
 
 const AppRoutes = () => 
     <App>

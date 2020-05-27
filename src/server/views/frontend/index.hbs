@@ -10,16 +10,17 @@
   <body>
     <div id="root"></div>
     <script>
-      //initialState
+      //INITIAL STATE
       const initialState = {
         device: {
           isMobile: '{{{ isMobile }}}'
         }
-      }
+      };
+
       window.initialState = initialState;
-      
     </script>
-    <script src="/bundle.js"></script>
+    <script src="/vendor.bundle.js"></script>
+    <script src="/main.bundle.js"></script>
   </body>
 </html>
 {{/compress}}
