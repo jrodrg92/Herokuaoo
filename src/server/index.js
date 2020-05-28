@@ -8,9 +8,14 @@ import exphbs from 'express-handlebars';
 
 import webpackconfig from '../../webpack.config.babel';
 
+//config
+import config from '../config';
+
 //API
 import blogApi from './api/blog';
+import libraryApi from './api/library';
 
+//Helpers
 import * as hbsHelper from '../lib/handlebars';
 
 import { isMobile } from '../lib/utils/device';
@@ -24,14 +29,14 @@ const app= express();
 
 app.use(express.static(path.join(__dirname, '../public')))
 
-// Handlebars setup
-app.engine('.hbs', exphbs({
-  extname: '.hbs',
-  helpers: hbsHelper
-}));
-  
-// View Engine Setup
-app.set('views', path.join(__dirname, 'views/'));
+//Handlebars setup
+app.engine(config.views.engine, exphbs({
+    extname: config.views.extension,
+    helpers: hbsHelper
+  }));
+
+//View
+app.set('views', path.join(__dirname, config.views.path));
 app.set('view engine', '.hbs');
 
 const webpackCompiler = webpack(webpackconfig);
@@ -49,6 +54,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 //API dispatch
 app.use('/api/blog', blogApi);
+app.use('/api/library', libraryApi);
 
 app.get('*', (req, res) => {
   res.render('frontend/index', {
@@ -56,8 +62,8 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen(port, err => {
+app.listen(config.serverPort, err => {
     if(!err){
-        open('http://localhost:'+port);
+        open('http://localhost:'+config.serverPort);
     }
 });
