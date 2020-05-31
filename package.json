@@ -21,6 +21,7 @@
     "file-loader": "^0.11.2",
     "html-minifier": "^3.5.2",
     "isomorphic-fetch": "^2.2.1",
+    "mongoose": "^5.9.16",
     "open": "^7.0.4",
     "path": "^0.12.7",
     "prop-types": "^15.5.8",

@@ -5,6 +5,7 @@ import webpackDevmiddleware from 'webpack-dev-middleware';
 import webpackHotmiddleware from 'webpack-hot-middleware';
 import open from 'open';
 import exphbs from 'express-handlebars';
+import mongoose from 'mongoose';
 
 //webpack config
 import webpackconfig from '../../webpack.config.dev';
@@ -22,11 +23,17 @@ import * as hbsHelper from '../lib/handlebars';
 //Utils
 import { isMobile } from '../lib/utils/device';
 
-//enviroment
-const port = process.env.PORT || 3000;
-
 //express app
 const app= express();
+
+//connect db
+mongoose.connect('mongodb://localhost/library', { useNewUrlParser:true ,
+                                                  useUnifiedTopology: true})
+    .then((result) => {
+        console.log('Db connected');
+    }).catch((err) => {
+        console.log(err);
+    });
 
 //Public
 app.use(express.static(path.join(__dirname, '../public')))

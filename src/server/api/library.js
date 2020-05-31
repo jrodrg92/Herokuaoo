@@ -3,12 +3,14 @@ import express from 'express';
 
 // Data
 import books from '../../data/books.json';
+import Book from '../models/book';
 
 // Express Router
 const Router = express.Router();
 
 Router.get('/books', (req, res, next) => {
   res.json(books);
+  Book.collection.find
 });
 
 // localhost:3000/api/library/book?id=1
