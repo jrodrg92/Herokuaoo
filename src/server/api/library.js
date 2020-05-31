@@ -10,7 +10,6 @@ const Router = express.Router();
 
 Router.get('/books', (req, res, next) => {
   res.json(books);
-  Book.collection.find
 });
 
 // localhost:3000/api/library/book?id=1

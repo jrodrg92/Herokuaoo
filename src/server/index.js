@@ -27,8 +27,8 @@ import { isMobile } from '../lib/utils/device';
 const app= express();
 
 //connect db
-mongoose.connect('mongodb://localhost/library', { useNewUrlParser:true ,
-                                                  useUnifiedTopology: true})
+mongoose.connect('mongodb+srv://root:root@devdb-wxxue.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser:true ,
+                                                                                                       useUnifiedTopology: true})
     .then((result) => {
         console.log('Db connected');
     }).catch((err) => {
