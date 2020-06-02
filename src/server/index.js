@@ -11,6 +11,9 @@ import webpackconfig from '../../webpack.config.babel';
 //config
 import config from '../config';
 
+//bd config conection
+import bd from './bd';
+
 //API
 import blogApi from './api/blog';
 import libraryApi from './api/library';
@@ -19,9 +22,6 @@ import libraryApi from './api/library';
 import * as hbsHelper from '../lib/handlebars';
 
 import { isMobile } from '../lib/utils/device';
-
-//Server port
-const port = process.env.PORT || 3000;
 
 const isDevelopment = process.env.NODE_ENV !== 'production';
 
