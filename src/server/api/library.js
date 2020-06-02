@@ -2,9 +2,6 @@
 import express from 'express';
 import MongoClient from 'mongodb';
 
-// Data
-import books from '../../data/books.json';
-
 import Bd from '../bd';
 
 import { LIBRARY } from '../bd';
