@@ -5,13 +5,15 @@ import webpackDevmiddleware from 'webpack-dev-middleware';
 import webpackHotmiddleware from 'webpack-hot-middleware';
 import open from 'open';
 import exphbs from 'express-handlebars';
-import mongoose from 'mongoose';
 
 //webpack config
 import webpackconfig from '../../webpack.config.dev';
 
 //config
 import config from '../config';
+
+//bd config conection
+import bd from './bd';
 
 //API
 import blogApi from './api/blog';
@@ -25,15 +27,6 @@ import { isMobile } from '../lib/utils/device';
 
 //express app
 const app= express();
-
-//connect db
-mongoose.connect('mongodb+srv://root:root@devdb-wxxue.mongodb.net/test?retryWrites=true&w=majority', { useNewUrlParser:true ,
-                                                                                                       useUnifiedTopology: true})
-    .then((result) => {
-        console.log('Db connected');
-    }).catch((err) => {
-        console.log(err);
-    });
 
 //Public
 app.use(express.static(path.join(__dirname, '../public')))

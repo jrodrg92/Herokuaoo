@@ -15,4 +15,4 @@ const Book = new Schema({
     image: String
 });
 
-export default mongoose.model('books',Book);
+export default mongoose.model('libraries',Book);
