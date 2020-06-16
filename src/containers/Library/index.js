@@ -18,14 +18,15 @@ class Library extends Component {
   };
 
   constructor(props) {
-    super(props);
+    super(props); 
 
     this.state = {
       displaySingleBook: false
     };
   }
 
-  componentWillMount() {
+  /*Se ejecuta cuando el componente ya se encuentra en el DOM*/
+  componentDidMount() {
     const {
       match: {
         params: {
@@ -45,6 +46,7 @@ class Library extends Component {
     }
   }
 
+  /*Metodo que se ejcuta cada vez que se aztualiza su parametro son las futuras propiedades*/
   componentWillReceiveProps(nextProps) {
     const {
       match: {
@@ -67,11 +69,15 @@ class Library extends Component {
 
   renderSingleBook(book) {
     return (
-      <div>
-        <h1>{book.title}</h1>
-        <p>Autor: {book.author}</p>
-        <p><img src={book.image} style={{ maxWidth: '300px' }} /></p>
-        <p><Link to="/library">Go back</Link></p>
+      <div className="row">
+        <div className="col-sm-12">
+          <p><Link to="/library">Go back</Link></p>
+          <p><img src={book.image} style={{ maxWidth: '300px' }} /></p>
+        </div>
+        <div className="col-sm-12">
+          <p>{book.title}</p>
+          <p>Autor: {book.author}</p>
+        </div>
       </div>
     );
   }
@@ -114,7 +120,11 @@ class Library extends Component {
 
     return (
       <div className="Library">
-        {show}
+        <div className="row">
+          <div className="col-sm-4">
+            {show}
+          </div>
+        </div>
       </div>
     );
   }
