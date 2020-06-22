@@ -19,13 +19,29 @@ class Header extends Component {
     return (
       <div className="Header">
         <div className="Logo">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>{title}</h2>
-          <ul className="menu">
-            {items && items.map((item, key) => {
-                return <li key={key}><Link to={item.url}>{item.title}</Link></li>;
-            })}
-          </ul>
+          <div className="row">
+            <div className="col-sm-4">
+              <img src={logo} className="App-logo" alt="logo" />
+              <h2>{title}</h2>
+            </div>
+            <div className="col-sm-8">
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <div className="Menu">
+                <div className="row">
+                  <div className="col-sm-12">
+                    <ul className="menu">
+                      {items && items.map((item, key) => {
+                          return <li key={key}><Link to={item.url}>{item.title}</Link></li>;
+                      })}
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     );

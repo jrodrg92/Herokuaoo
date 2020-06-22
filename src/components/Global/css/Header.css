@@ -3,11 +3,18 @@
     height: 160px;
     padding: 20px;
     color: white;
+    padding-bottom: 150px;
+    margin-bottom: 10px;
+  }
+
+  .Menu{
+    background-color: #222;
+    color: white;
   }
 
   .Logo img {
       animation: App-logo-spin infinite 20s linear;
-      height: 80px;
+      height: 100px;
   }
   
   @keyframes App-logo-spin {

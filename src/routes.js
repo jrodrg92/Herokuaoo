@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 //Containers
 import Home from './containers/Home';
 import Library from './containers/Library';
+import AddBook from './containers/AddBook';
 
 const AppRoutes = () => 
     <App>
@@ -19,6 +20,7 @@ const AppRoutes = () =>
                 <Route path="/blog" component={Blog} />
                 <Route exact path="/library" component={Library} />
                 <Route exact path="/library/:id" component={Library} />
+                <Route exact path="/library/addBook" component={AddBook} />
                 <Route path="/contact" component={Contact} />
         </Switch>
     </App>
