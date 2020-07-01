@@ -5,6 +5,8 @@ import webpackDevmiddleware from 'webpack-dev-middleware';
 import webpackHotmiddleware from 'webpack-hot-middleware';
 import open from 'open';
 import exphbs from 'express-handlebars';
+import cors from 'cors';
+import helmet from 'helmet';
 
 import webpackconfig from '../../webpack.config.babel';
 
@@ -45,6 +47,11 @@ if(isDevelopment){
     app.use(webpackHotmiddleware(webpackCompiler));
 }
 
+//middleware
+app.use(cors());
+app.use(helmet());
+
+//device detector
 app.use((req, res, next) => {
     res.locals.isMobile = isMobile (req.headers['user-agent']);
     return next();

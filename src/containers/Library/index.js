@@ -69,15 +69,18 @@ class Library extends Component {
 
   renderSingleBook(book) {
     return (
-      <div className="row">
-        <div className="col-sm-12">
-          <p><Link to="/library">Go back</Link></p>
-          <p><img src={book.image} style={{ maxWidth: '300px' }} /></p>
-        </div>
-        <div className="col-sm-12">
-          <p>{book.title}</p>
-          <p>Autor: {book.author}</p>
-        </div>
+      <div class="container-fluid">
+        <div className="row">
+          <div className="col-lg-4">
+            <p><Link to="/library">Go back</Link></p>
+            <p><img src={book.image} style={{ maxWidth: '300px' }} /></p>
+            <p>{book.title}</p>
+            <p>Autor: {book.author}</p>
+          </div>
+          <div className="col-lg-6">
+            <p>Resume: {book.resume}</p>
+          </div>
+        </div>         
       </div>
     );
   }
@@ -121,9 +124,7 @@ class Library extends Component {
     return (
       <div className="Library">
         <div className="row">
-          <div className="col-sm-4">
             {show}
-          </div>
         </div>
       </div>
     );

@@ -8,7 +8,8 @@ import { HashRouter as Router} from 'react-router-dom';
 import Bluebird from 'bluebird';
 import { Provider } from 'react-redux';
 
-import AppRoutes from './routes';
+import AppRoutes from './routes/routes';
+
 import './index.css';
 
 //redux store configuration
