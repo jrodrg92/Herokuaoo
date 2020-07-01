@@ -26,8 +26,11 @@ class Header extends Component {
             </div>
             <div className="col-sm-8">
               <br/>
-              <br/>
-              <br/>
+              <div className="Login">
+                <div className="row">
+                  <p><Link to="/library">Iniciar sesion</Link></p>
+                </div>
+              </div>
               <br/>
               <div className="Menu">
                 <div className="row">
