@@ -5,6 +5,8 @@ import webpackDevmiddleware from 'webpack-dev-middleware';
 import webpackHotmiddleware from 'webpack-hot-middleware';
 import open from 'open';
 import exphbs from 'express-handlebars';
+import cors from 'cors';
+import helmet from 'helmet';
 
 //webpack config
 import webpackconfig from '../../webpack.config.dev';
@@ -45,6 +47,10 @@ app.set('view engine', '.hbs');
 const webpackCompiler = webpack(webpackconfig);
 app.use(webpackDevmiddleware(webpackCompiler));
 app.use(webpackHotmiddleware(webpackCompiler));
+
+//middleware
+app.use(cors());
+app.use(helmet());
 
 //device detector
 app.use((req, res, next) => {
