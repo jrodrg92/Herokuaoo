@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 
 import '../components/Global/css/App.css';
 
-import Header from '../components/Global/Header';
-import Footer from '../components/Global/Footer';
-import Content from '../components/Global/Content';
+import Header from './Global/Header';
+import Footer from './Global/Footer';
+import Content from './Global/Content';
 
 import items from '../data/menu';
 
