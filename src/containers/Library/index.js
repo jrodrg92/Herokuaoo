@@ -92,6 +92,7 @@ class Library extends Component {
 
   renderBooksList(books) {
     return (
+      <div className="col-6">
       <div className="Library">
         <h1>Library</h1>
 
@@ -106,6 +107,7 @@ class Library extends Component {
             })
           }
         </ul>
+      </div>
       </div>
     );
   }

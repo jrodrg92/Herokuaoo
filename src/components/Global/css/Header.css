@@ -20,10 +20,9 @@
 
   .Login{
     text-align: end;
-    width: 1270px;
     background-color: #222;
     color: white;
-    margin-right: 20px;
+    margin-right: 230px;
   }
   
   @keyframes App-logo-spin {

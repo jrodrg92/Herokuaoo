@@ -20,8 +20,10 @@ class Header extends Component {
       <div className="Header">
         <div class="container-fluid">
           <div className = "row">
-            <div className="Login">
-              <p><Link to="/library">Log in</Link> / <Link to="/library">Register</Link></p>
+            <div className="col-12">
+              <div className="Login">
+                <p><Link to="/library">Log in</Link> / <Link to="/library">Register</Link></p>            
+              </div>
             </div> 
           </div>
           <div class = "row">
