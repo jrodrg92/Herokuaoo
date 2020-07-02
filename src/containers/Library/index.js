@@ -10,6 +10,9 @@ import * as actions from './actions';
 // Utils
 import { isFirstRender } from '../../lib/utils/frontend';
 
+//Css
+import './Library.css';
+
 class Library extends Component {
   static propTypes = {
     loadBooks: PropTypes.func.isRequired,
@@ -69,7 +72,7 @@ class Library extends Component {
 
   renderSingleBook(book) {
     return (
-      <div class="container-fluid">
+      <div class="container-fluid" className="book">
         <div className="row">
           <div className="col-lg-4">
             <p><Link to="/library">Go back</Link></p>
@@ -89,7 +92,7 @@ class Library extends Component {
 
   renderBooksList(books) {
     return (
-      <div>
+      <div className="Library">
         <h1>Library</h1>
 
         <ul>

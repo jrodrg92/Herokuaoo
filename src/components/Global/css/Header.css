@@ -1,6 +1,6 @@
   .Header{
     background-color: #222;
-    height: 160px;
+    height: 260px;
     padding: 20px;
     color: white;
     padding-bottom: 150px;
@@ -8,9 +8,9 @@
   }
 
   .Menu{
-    margin-left: 600px;
     background-color: #222;
     color: white;
+    margin-top: 20px;
   }
 
   .Logo img {
@@ -19,9 +19,11 @@
   }
 
   .Login{
-    margin-left: 1000px;
+    text-align: end;
+    width: 1270px;
     background-color: #222;
     color: white;
+    margin-right: 20px;
   }
   
   @keyframes App-logo-spin {
@@ -33,11 +35,13 @@
       margin: 0;
       padding: 0;
       list-style: none;
+      width: auto;
   }
 
   .menu li{
     display: inline-block;
     padding-right: 18px;
+    width: auto;
   }
 
   .menu li a{
