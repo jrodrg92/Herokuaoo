@@ -93,21 +93,21 @@ class Library extends Component {
   renderBooksList(books) {
     return (
       <div className="col-6">
-      <div className="Library">
-        <h1>Library</h1>
+        <div className="Library">
+          <h1>Library</h1>
 
-        <ul>
-          {
-            books.map((book, key) => {
-              return (
-                <li key={key}>
-                  <Link to={`/library/${book.id}`}>{book.title}</Link> - {book.author}
-                </li>
-              )
-            })
-          }
-        </ul>
-      </div>
+          <ul>
+            {
+              books.map((book, key) => {
+                return (
+                  <li key={key}>
+                    <Link to={`/library/${book.id}`}>{book.title}</Link> - {book.author}
+                  </li>
+                )
+              })
+            }
+          </ul>
+        </div>
       </div>
     );
   }

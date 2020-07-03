@@ -1,6 +1,6 @@
   .Header{
     background-color: #222;
-    height: 260px;
+    height: 320px;
     padding: 20px;
     color: white;
     padding-bottom: 150px;
@@ -17,12 +17,19 @@
       animation: App-logo-spin infinite 20s linear;
       height: 100px;
   }
-
+  
   .Login{
     text-align: end;
-    background-color: #222;
-    color: white;
-    margin-right: 230px;
+    margin-right: 300px;
+  }
+
+  .Buscador{
+  }
+
+  .Buscador input{
+    width: 700px;
+    border-bottom: 1px solid #4dd0e1;
+    box-shadow: 0 1px 0 0 #4dd0e1;
   }
   
   @keyframes App-logo-spin {
