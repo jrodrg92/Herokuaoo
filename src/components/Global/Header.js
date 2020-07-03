@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import logo from './images/logo.svg';
 import './css/Header.css';
 
-
 class Header extends Component {
 
   static propTypes = {
@@ -21,21 +20,18 @@ class Header extends Component {
       <div className="Header">
         <div class="container-fluid">
           <div className = "row">
-            <div className="col-lg-12 col-sm-12">
+            <div className="col-12">
               <div className="Login">
                 <p><Link to="/library">Log in</Link> / <Link to="/library">Register</Link></p>            
               </div>
             </div> 
           </div>
           <div class = "row">
-            <div className="col-4">
-              <div className="Logo">
+            <div className="Logo">
+              <div className="col-md-4">
                 <img src={logo} className="App-logo" alt="logo" />
                 <h2>{title}</h2>
               </div>
-            </div>
-            <div className="Buscador col-12">
-              <input className="form-control my-0 py-1 red-border" type="text" placeholder="Search" aria-label="Search"/>
             </div>
           </div>
           <div class = "row">
