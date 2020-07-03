@@ -82,8 +82,6 @@ class Library extends Component {
           </div>
           <div className="col-lg-6">
             <p>Resume: {book.resume}</p>
-            <br/>
-            <button>Pagar</button>
           </div>
         </div>         
       </div>
