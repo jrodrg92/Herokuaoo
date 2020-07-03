@@ -17,6 +17,7 @@
       animation: App-logo-spin infinite 20s linear;
       height: 100px;
   }
+<<<<<<< HEAD
 
   .Login{
     text-align: end;
@@ -24,6 +25,8 @@
     color: white;
     margin-right: 230px;
   }
+=======
+>>>>>>> parent of de04d32... cambios inicio
   
   @keyframes App-logo-spin {
     from { transform: rotate(0deg); }

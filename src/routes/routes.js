@@ -7,7 +7,7 @@ import Library from '../containers/Library';
 import AddBook from '../containers/AddBook';
 import Contact from '../containers/Contact';
 
-import App from '../components/App';
+import App from '../containers/App';
 import Blog from '../containers/Blog';
 
 import About from '../containers/About';

@@ -18,6 +18,7 @@ class Header extends Component {
 
     return (
       <div className="Header">
+<<<<<<< HEAD
         <div class="container-fluid">
           <div className = "row">
             <div className="col-12">
@@ -31,6 +32,29 @@ class Header extends Component {
               <div className="col-md-4">
                 <img src={logo} className="App-logo" alt="logo" />
                 <h2>{title}</h2>
+=======
+        <div className="Logo">
+          <div className="row">
+            <div className="col-sm-4">
+              <img src={logo} className="App-logo" alt="logo" />
+              <h2>{title}</h2>
+            </div>
+            <div className="col-sm-8">
+              <br/>
+              <br/>
+              <br/>
+              <br/>
+              <div className="Menu">
+                <div className="row">
+                  <div className="col-sm-12">
+                    <ul className="menu">
+                      {items && items.map((item, key) => {
+                          return <li key={key}><Link to={item.url}>{item.title}</Link></li>;
+                      })}
+                    </ul>
+                  </div>
+                </div>
+>>>>>>> parent of de04d32... cambios inicio
               </div>
             </div>
           </div>
